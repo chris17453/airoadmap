@@ -15,14 +15,14 @@ def build_template(args):
         'config':args.out,
         'logo_path': 'assets/logo.png',
         'intro_image': "assets/intro.png",
-        'background_image': "assets/background1.png",
+        'background_image': "assets/background3.png",
     }
 
 
     PPT = "I want to talk about legacy DOS applications, their maintenance, and how they are still relevant. \
         How to service them and what the legacy support paths are."
-    PPT = "I want to talk about the indecency and obsurdity surrounding whitespaces and tabs.. and why YOU are wrong. \
-        "
+    PPT = "I want to talk about the indecency and obsurdity surrounding whitespaces and tabs.. and why YOU are wrong. "
+    PPT = "Importance of CI/CD"
     engine = PptEngine(config, PPT)
 
 def main():

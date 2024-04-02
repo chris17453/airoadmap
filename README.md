@@ -1,60 +1,60 @@
-# AI Adoption Roadmap Presentation Generator
+# PPTonator: Automated PowerPoint Presentation Builder
 
-This Python script generates a PowerPoint presentation based on a YAML template, outlining an AI adoption roadmap. The presentation includes various slides with content and images, adhering to a professional design.
-
-## Requirements
-
-- Python 3.x
-- Required Python packages: `openai`, `python-pptx`, `requests`, `PIL`
-
-## Setup
-
-1. Install the required Python packages using pip:
-
-   ```bash
-   pip install openai python-pptx requests pillow
-   ```
-
-2. Ensure you have an OpenAI API key set up and stored as an environment variable `aitui_openai_key`.
-
-## Usage
-
-1. Prepare a YAML template file (`template.yaml`) defining the structure and content of the presentation. See the provided example for reference.
-
-2. Run the script `main.py`:
-
-   ```bash
-   python main.py
-   ```
-
-3. The script will generate a PowerPoint presentation (`AI_Adoption_Roadmap.pptx`) based on the provided template.
-
-## YAML Template Structure
-
-The YAML template contains the following fields:
-
-- `company_name`: Name of the company or organization.
-- `author`: Author of the presentation.
-- `date`: Creation date of the presentation.
-- `logo_path`: File path to the company logo.
-- `title`: Title of the presentation.
-- `ppt_name`: Desired name for the output PowerPoint file.
-- `intro_image_prompt`: Prompt for generating the introductory image.
-- `intro_image`: File path to the introductory image.
-- `background_image`: File path to the background image for section slides.
-- `sections`: List of sections containing titles, content, and optional images for each slide.
+PPTonator is a cutting-edge tool designed to automate the creation of PowerPoint presentations using advanced natural language processing and image generation techniques. Leveraging OpenAI's powerful models, PPTonator transforms textual content into engaging, visually appealing PowerPoint slides that capture the essence of your topics.
 
 ## Features
 
-- Generates a professional PowerPoint presentation outlining an AI adoption roadmap.
-- Incorporates a company logo and introductory image.
-- Utilizes IBM Plex Sans font for consistent branding.
-- Customizes slide backgrounds with high-quality images.
-- Supports the inclusion of images for each content section.
+- **Automatic Slide Generation:** Converts textual descriptions into comprehensive PowerPoint slides.
+- **DALL-E Image Integration:** Utilizes DALL-E 3 for dynamic image creation, making each slide visually unique.
+- **Customizable Templates:** Offers flexibility in presentation design with customizable templates.
+- **Efficient Workflow:** Streamlines the presentation creation process, saving time and enhancing productivity.
 
-## Note
+## Installation
 
-- Ensure all file paths (logo, images) are correctly specified in the YAML template and exist in the appropriate directories.
-- The script automatically generates images using OpenAI DALL-E API if an image path is not provided for a section.
+Clone the repository and install the required dependencies.
 
-Feel free to reach out for any assistance or customization needs!
+```bash
+git clone https://github.com/yourgithub/pptonator.git
+cd pptonator
+pip install -r requirements.txt
+```
+
+## Usage
+
+PPTonator comprises two main scripts: `build.py` for constructing the presentation and `generate.py` for creating a presentation template based on provided textual content.
+
+### Generating a Template
+
+Generate a YAML template specifying the presentation's structure, including titles, sections, and images.
+
+```bash
+python -m pptonator.cli generate --out <output_template.yaml>
+```
+
+### Building the Presentation
+
+Create the PowerPoint presentation using the previously generated YAML template.
+
+```bash
+python -m pptonator.cli build --input <template.yaml> --out <presentation.pptx>
+```
+
+## Configuration
+
+Before generating your presentation, customize the `config` section in `cli.py` to include your company name, author, presentation date, and paths to logos or background images.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or new features, please create an issue or submit a pull request.
+
+## License
+
+Distributed under the BSD 3T License. See `LICENSE` for more information.
+
+## Acknowledgments
+
+- OpenAI for providing the AI models that power the text and image generation.
+- The Python-PPTX library for making PowerPoint automation possible.
+
+Transform your presentation creation process with PPTonator—where innovation meets efficiency.
+ccinctly introduce, guide, and inform users about the functionalities, setup, and usage of your GitHub project, PPTonator.
