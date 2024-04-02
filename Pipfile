@@ -8,6 +8,8 @@ python-pptx = "*"
 pyyaml = "*"
 openai = "*"
 requests = "*"
+shell = "*"
+pyaml = "*"
 
 [dev-packages]
 
